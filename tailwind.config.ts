@@ -8,6 +8,17 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        'spin-slow': 'spin 8s linear infinite',
+        'spin-reverse': 'spin-reverse 8s linear infinite',
+      },
+      keyframes: {
+        'spin-reverse': {
+          '0%': { transform: 'rotate(360deg)' },
+          '100%': { transform: 'rotate(0deg)' },
+        },
+      },
+
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
